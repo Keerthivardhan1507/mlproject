@@ -14,122 +14,124 @@ Welcome to the Student Performance Prediction repository! This project is an end
 - [License](#-license)
 
 
-🔎 Introduction
+## 🔎 Introduction
 
 This repository demonstrates a complete ML workflow, including:
+- Data ingestion
+- Data preprocessing & transformation
+- Model training and evaluation
+- Model deployment using Flask
 
-Data ingestion
-
-Data preprocessing & transformation
-
-Model training and evaluation
-
-Model deployment using Flask
-
-It’s designed as a hands-on project for understanding the lifecycle of an ML application.
+## It’s designed as a hands-on project for understanding the lifecycle of an ML application.
 
 ⚙️ Tech Stack
 
-Python 3.8+
+- Python 3.8+
+- Pandas, NumPy – Data manipulation
+- Scikit-learn, XGBoost, CatBoost – Machine learning
+- Flask – Model deployment
+- Logging & Custom Exceptions – Debugging and error handling
+##
 
-Pandas, NumPy – Data manipulation
+## Project Structure
 
-Scikit-learn, XGBoost, CatBoost – Machine learning
-
-Flask – Model deployment
-
-Logging & Custom Exceptions – Debugging and error handling
-
+```
 project/
-│── artifacts/              # Intermediate files & models
+│
+├── artifacts/          # Intermediate files & models
 │   ├── data.csv
 │   ├── train.csv
 │   ├── test.csv
-│   ├── model.pkl           # Trained ML model
-│   ├── preprocessor.pkl    # Data preprocessing pipeline
+│   ├── model.pkl       # Trained ML model
+│   └── preprocessor.pkl# Data preprocessing pipeline
 │
-│── notebook/               # Jupyter notebooks
+├── notebook/           # Jupyter notebooks
 │   └── data/
-│       └── stud.csv        # Raw dataset
+│       └── stud.csv    # Raw dataset
 │
-│── src/                    # Source code
-│   ├── components/         # Core ML pipeline scripts
+├── src/                # Source code
+│   ├── components/     # Core ML pipeline scripts
 │   │   ├── data_ingestion.py
 │   │   ├── data_transformation.py
-│   │   ├── model_trainer.py
+│   │   └── model_trainer.py
 │   │
-│   ├── pipeline/           # Training & prediction pipelines
+│   ├── pipeline/       # Training & prediction pipelines
 │   │   ├── train_pipeline.py
-│   │   ├── predict_pipeline.py
+│   │   └── predict_pipeline.py
 │   │
-│   ├── exception.py        # Custom exceptions
-│   ├── logger.py           # Logging utility
-│   ├── utils.py            # Helper functions
+│   ├── exception.py    # Custom exceptions
+│   ├── logger.py       # Logging utility
+│   └── utils.py        # Helper functions
 │
-│── templates/              # HTML templates for Flask
-│── app.py                  # Flask app entry point
-│── requirements.txt        # Dependencies
-│── setup.py                # Package setup
-│── README.md               # Documentation
+├── templates/          # HTML templates for Flask
+│
+├── app.py              # Flask app entry point
+├── requirements.txt    # Dependencies
+├── setup.py            # Package setup
+└── README.md           # Documentation
+```
 
-1️⃣ Clone the repository:
-git clone https://github.com/Keerthivardhan1507/mlproject.git
-cd mlproject
-2️⃣ Create & activate a virtual environment:
-conda create -n student_pred python=3.8 -y
-conda activate student_pred
-3️⃣ Install dependencies:
-pip install -r requirements.txt
+## ⚙️ Installation
 
-📊 Usage
-1️⃣ Train the Model
-python src/pipeline/train_pipeline.py
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Keerthivardhan1507/mlproject.git
+    cd mlproject
+    ```
 
-2️⃣ Run Flask App (for Predictions)
-python app.py
+2.  **Create & activate a virtual environment:**
+    ```bash
+    conda create -n myenv python=3.8 -y
+    conda activate myenv
+    ```
 
+3.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+---
+
+## 🚀 Usage
+
+1.  **Train the Model:**
+    ```bash
+    python src/pipeline/train_pipeline.py
+    ```
+
+2.  **Run the Application (for Predictions):**
+    ```bash
+    python app.py
+    ```
+    
 Then open your browser: 👉 http://127.0.0.1:5000/
 
-📈 Model Training & Evaluation
+ ## 📈 Model Training & Evaluation
 
-Implemented ML models:
+- Implemented ML models:
+- Random Forest
+- Decision Tree
+- Gradient Boosting
+- Linear Regression
+- K-Neighbors Regressor
+- XGBoost
+- CatBoost
+- AdaBoost
+- Models are compared using R² Score and the best-performing model is selected.
 
-Random Forest
+## 📌 Future Improvements
 
-Decision Tree
+1. Add Docker support for deployment
+2. Deploy on AWS/GCP/Azure
+3. Integrate CI/CD pipeline
 
-Gradient Boosting
+## 🤝 Contributing
 
-Linear Regression
+1. Contributions are welcome! 🎉
+2. Open an Issue
+3. Submit a Pull Request
 
-K-Neighbors Regressor
-
-XGBoost
-
-CatBoost
-
-AdaBoost
-
-Models are compared using R² Score and the best-performing model is selected.
-
-📌 Future Improvements
-
-Add Docker support for deployment
-
-Deploy on AWS/GCP/Azure
-
-Integrate CI/CD pipeline
-
-🤝 Contributing
-
-Contributions are welcome! 🎉
-
-Open an Issue
-
-Submit a Pull Request
-
-📜 License
-
-This project is licensed under the MIT License.
+## 📜 License
+- This project is licensed under the MIT License.
 
 
